@@ -124,6 +124,7 @@ tr:hover td{background:var(--s50)}
 /* SCREENS */
 .screen{display:none}
 .screen.active{display:flex;flex-direction:column;gap:12px}
+#sc-delegation.active{gap:0;padding:0;height:100%;overflow:hidden}
 
 /* SYNC BAR */
 .sync-bar{padding:6px 14px;background:linear-gradient(90deg,var(--gl),#fff);border-bottom:1px solid var(--s200);font-size:10px;color:var(--gd);font-weight:600;display:flex;align-items:center;gap:8px}
@@ -1271,25 +1272,19 @@ tr.o2d-overdue:hover td{background:#fff5d6}
 </div>
 
 <!-- ══════════ DELEGATION ══════════ -->
-<div class="screen" id="sc-delegation">
-  <div class="sync-bar" style="background:linear-gradient(90deg,var(--pl),#fff);color:var(--p)">👤 Delegation — Takkar Polychem Internal System · Google Apps Script</div>
-  <div class="ph">
-    <div><div class="pt">Delegation</div><div class="ps">Internal delegation management · takkarpolychem.com · Google Apps Script</div></div>
-    <div class="ha">
-      <button class="btn" style="background:var(--p);color:#fff;border-color:var(--p)" onclick="window.open('https://script.google.com/a/macros/takkarpolychem.com/s/AKfycbysaa_5eoEQjD2G57IRnPzV0O2YNo-WfPWxweyoSAK5j1kwbmUe5Q4nvX6PiYz0cSQ/exec','_blank')">🔗 Open in New Tab</button>
-      <button class="btn btno" onclick="document.getElementById('delg-frame').src=document.getElementById('delg-frame').src">⟳ Reload</button>
-    </div>
+<div class="screen" id="sc-delegation" style="height:100%;padding:0;gap:0">
+  <!-- Full-height iframe — fills the entire main content area -->
+  <iframe id="delg-frame"
+    src="https://script.google.com/a/macros/takkarpolychem.com/s/AKfycbysaa_5eoEQjD2G57IRnPzV0O2YNo-WfPWxweyoSAK5j1kwbmUe5Q4nvX6PiYz0cSQ/exec"
+    style="flex:1;width:100%;height:100%;border:none;min-height:calc(100vh - var(--topbar))"
+    title="Delegation System"
+    allowfullscreen></iframe>
+  <!-- Thin footer bar with controls -->
+  <div style="display:flex;align-items:center;gap:8px;padding:5px 14px;background:#fff;border-top:1px solid var(--s200);flex-shrink:0;font-size:11px;color:var(--s400)">
+    👤 Delegation — Takkar Polychem Internal System · Google Apps Script &nbsp;
+    <button class="btn-sm btno" style="margin-left:auto" onclick="window.open('https://script.google.com/a/macros/takkarpolychem.com/s/AKfycbysaa_5eoEQjD2G57IRnPzV0O2YNo-WfPWxweyoSAK5j1kwbmUe5Q4nvX6PiYz0cSQ/exec','_blank')">🔗 Open in New Tab</button>
+    <button class="btn-sm btno" onclick="document.getElementById('delg-frame').src=document.getElementById('delg-frame').src">⟳ Reload</button>
   </div>
-  <div class="card" style="flex:1">
-    <div class="ch"><div class="ct">Delegation System</div><span class="ds-badge" style="background:var(--pl);color:var(--p)">👤 Apps Script</span></div>
-    <div style="height:600px;padding:0">
-      <iframe id="delg-frame"
-        src="https://script.google.com/a/macros/takkarpolychem.com/s/AKfycbysaa_5eoEQjD2G57IRnPzV0O2YNo-WfPWxweyoSAK5j1kwbmUe5Q4nvX6PiYz0cSQ/exec"
-        style="width:100%;height:100%;border:none;border-radius:0 0 10px 10px"
-        title="Delegation System"></iframe>
-    </div>
-  </div>
-  <p style="font-size:11px;color:var(--s400);text-align:center;padding:6px">If the system requires login, <a href="https://script.google.com/a/macros/takkarpolychem.com/s/AKfycbysaa_5eoEQjD2G57IRnPzV0O2YNo-WfPWxweyoSAK5j1kwbmUe5Q4nvX6PiYz0cSQ/exec" target="_blank" style="color:var(--p);font-weight:600">click here to open directly ↗</a></p>
 </div>
 
 </div><!-- /main -->
