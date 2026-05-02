@@ -1035,30 +1035,8 @@ tr.o2d-overdue:hover td{background:#fff5d6}
       </table></div>
     </div>
   </div>
-  <div class="screen" id="sc-dispfms">
-  <div class="sync-bar">🚚 Dispatch FMS — Pending Dispatch Tracking</div>
-  <div class="ph">
-    <div><div class="pt">Dispatch FMS</div>
-    <div class="ps">Orders ready/pending for dispatch — Hold & Done tracking</div></div>
-    <div class="ha">
-      <input class="si" id="dfmsQ" placeholder="Search customer, SO, product…" oninput="filt('dfmsQ','dfmsTb')">
-      <button class="fb act" id="dfms-all" onclick="filtDfms('all')">All</button>
-      <button class="fb" id="dfms-hold" onclick="filtDfms('hold')">⏸ On Hold</button>
-      <button class="fb" id="dfms-done" onclick="filtDfms('done')">✅ Done</button>
-    </div>
-  </div>
-  <!-- Summary metrics -->
-  <!-- Table with columns: Date, Party, Invoice, Item, Qty, Rate, Status, Action -->
-  <div class="card">
-    <table>
-      <thead>
-        <tr><th>Date</th><th>Party Name</th><th>Invoice No</th><th>Item</th><th>Qty</th>
-        <th>Rate</th><th>Amount</th><th>Status</th><th>Hold Remark</th><th>Action</th></tr>
-      </thead>
-      <tbody id="dfmsTb"></tbody>
-    </table>
-  </div>
-  <!-- ══════════ DISPATCH FMS ══════════ -->
+
+  <!-- DISPATCH FMS SCREEN FOLLOWS -->
 <div class="screen" id="sc-dispfms">
   <div class="sync-bar fms-sync">🚚 Dispatch FMS — Hold &amp; Done tracking · sourced from "Dispatch" sheet <button class="btn-sm btno" style="margin-left:10px" onclick="erpRefresh('dispfms')">⟳ Refresh</button></div>
   <div class="ph">
